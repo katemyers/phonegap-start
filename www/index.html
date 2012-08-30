@@ -1,42 +1,130 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>NPR Stations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    
+  </head>
+  <body>
 
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready">
-                <p class="status pending blink">Connecting to Device</p>
-                <p class="status complete blink hide">Device is Ready</p>
-            </div>
+    <div class="navbar">
+         <div class="navbar-inner">
+            <h3><img src="img/nprlogo_138x46.gif" width="138" height="46" alt="NPR"> Thingamabob</h3>
         </div>
-        <script type="text/javascript" src="cordova-2.0.0.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
-</html>
+    </div>
+	<div class="tabbable">
+		<ul class="nav nav-tabs">
+			<li class="active">
+			 <a href="#tab1" data-toggle="tab">What's Playing?</a>
+			</li>
+			<li><a href="#tab2" data-toggle="tab">What's Playing Near Me?</a>
+			</li>
+			<li><a href="#tab3" data-toggle="tab">Programs</a>
+            </li>
+		</ul>
+		<div class="tab-content">
+		    <div class="tab-pane active" id="tab1">
+                <ul class="pager">
+                    <li class="previous disabled">
+                        <a href="#" class="allEpisodesPrevious">&larr; Previous</a>
+                    </li>
+                    <li class="next">
+                        <a href="#" class="allEpisodesNext">Next &rarr;</a>
+                     </li>
+                </ul>
+                <table class="table table-bordered table-striped table-condensed" id="allEpisodesTable" data-start="0"></table>
+                <ul class="pager">
+                    <li class="previous disabled">
+                        <a href="#" class="allEpisodesPrevious">&larr; Previous</a>
+                    </li>
+                    <li class="next">
+                        <a href="#" class="allEpisodesNext">Next &rarr;</a>
+                     </li>
+                </ul>
+            </div>
+			<div class="tab-pane" id="tab2">
+				<ul class="pager">
+                    <li class="previous disabled">
+                        <a href="#" class="localEpisodesPrevious">&larr; Previous</a>
+                    </li>
+                    <li class="next">
+                        <a href="#" class="localEpisodesNext">Next &rarr;</a>
+                     </li>
+                </ul>
+                <table class="table table-bordered table-striped table-condensed" id="localEpisodesTable" data-start="0"></table>
+                <ul class="pager">
+                    <li class="previous disabled">
+                        <a href="#" class="localEpisodesPrevious">&larr; Previous</a>
+                    </li>
+                    <li class="next">
+                        <a href="#" class="localEpisodesNext">Next &rarr;</a>
+                     </li>
+                </ul>
+			</div>
+            <div class="tab-pane" id="tab3">
+                <table class="table table-bordered table-striped table-condensed" id="programsTable">
+                    <tr data-guid="4fcf72dc12df45eda593636aad3691e6">
+                        <td>All Things Considered</td>
+                    </tr>
+                    <tr data-guid="4fcf724e245548c0a6b1a5545d88b331">
+                        <td>Morning Edition</td>
+                    </tr>   
+                    <tr data-guid="4fcf721f0ecd42b1b66d9e15603c660e">
+                        <td>Weekend Edition Saturday</td>
+                    </tr>                     
+                    <tr data-guid="503e640b1d13461db38ba5cef44fda0d">
+                        <td>Weekend Edition Sunday</td>
+                    </tr>   
+                    <tr data-guid="4fcf71ef07164a229759ec89235e3695">
+                        <td>Weekends on All Things Considered</td>
+                    </tr>
+                    <tr data-guid="503d310112204cb59f335044ddca9a50">
+                        <td>Car Talk</td>
+                    </tr>                                                                 
+                    <tr data-guid="4fcf71e725f548b085db772ce746d953">
+                        <td>Fresh Air from WHYY</td>
+                    </tr> 
+                    <tr data-guid="503d31ec12024813a9d0694e6689acc7">
+                        <td>TED Radio Hour</td>
+                    </tr>                     
+                    <tr data-guid="4fcf71e903ea4f0ab54a32e169366401">
+                        <td>Talk of the Nation</td>
+                    </tr>   
+                    <tr data-guid="4fcf72331dd842a59ed0fb53f9fa7de1">
+                        <td>Science Friday</td>
+                    </tr>  
+                    <tr data-guid="4fcf71e9030049708a70fdd544493522">
+                        <td>Tell Me More</td>
+                    </tr>
+                    <tr data-guid="503d3319065348df9fa93827b44d1101">
+                        <td>Ask Me Another</td>
+                    </tr>  
+                    <tr data-guid="4fcf725f0fa447a5b575ecebecf7e160">
+                        <td>Wait Wait...Don't Tell Me!</td>
+                    </tr>                                                                                                    
+                    <tr data-guid="4fcf71e901a14c639c8053e8093c17bb">
+                        <td>The Diane Rehm Show</td>
+                    </tr>  
+                  
+                                      
+                </table>
+                </div>
+            </div>			
+		</div>
+	</div>
+
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.bus.js"></script>
+	<script type="text/javascript" src="js/date.format.js"></script>
+    <script type="text/javascript" src="js/busapp.js"></script>
+  </body>
+</html>  
+ 
